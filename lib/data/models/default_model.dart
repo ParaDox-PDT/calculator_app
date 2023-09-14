@@ -1,8 +1,3 @@
-import 'package:hive/hive.dart';
-
-part 'default_model.g.dart';
-
-
 class DefaultModelFields{
   static const String id="id";
   static const String name="name";
@@ -11,13 +6,10 @@ class DefaultModelFields{
   static const String defaultTable = "default_table";
 }
 
-@HiveType(typeId: 1)
 class DefaultModel {
-  @HiveField(0)
+
   int? id;
-  @HiveField(1)
   final num age;
-  @HiveField(2)
   final String name;
 
   DefaultModel({this.id,required this.age, required this.name});
